@@ -2,6 +2,10 @@
      window.location.href = 'index.html'
 
  }
+
+ function redirectToCadastro() {
+    window.location.href = 'cadastro.php';
+}
  
 function send(){
 
