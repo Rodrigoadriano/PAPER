@@ -24,7 +24,7 @@
             </div>
 
             <div class="esq cards">
-                <form action="insert.php" method="post">
+                <form id="meuForm" method="post">
                         <table>
                         <tr>
                             <td colspan="2">Cadastro de Funcionários</td>
@@ -52,7 +52,7 @@
                     </tr>
                         </table>
                     <br><br>
-                    <input type="submit" name="Gravar">
+                    <input type="submit" name="Gravar" onclick="send()">
                     <button type="button" id="voltarBtn" onclick="home()">Voltar para a Página Principal</button>
             </form>
             
