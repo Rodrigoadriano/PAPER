@@ -6,6 +6,9 @@
  function redirectToCadastro() {
     window.location.href = 'cadastro.php';
 }
+ function redirectTolist() {
+    window.location.href = 'lista.php';
+}
  
 function send(){
 
