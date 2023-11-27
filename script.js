@@ -71,15 +71,24 @@ function CarregaTabela(){
        table.appendChild(headerRow);
    
        // Preencher a tabela com os dados
-       json.forEach(obj => {
-           const row = document.createElement('tr');
-           headers.forEach(header => {
-               const cell = document.createElement('td');
-               cell.textContent = obj[header];
-               row.appendChild(cell);
-           });
-           table.appendChild(row);
-       });
+    json.forEach(obj => {
+        const row = document.createElement('tr');
+
+        // Adiciona o checkbox na primeira célula de cada linha
+        const checkboxCell = document.createElement('td');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = obj.id; // Substitua 'id' pelo nome do campo que contém o ID
+        checkboxCell.appendChild(checkbox);
+        row.appendChild(checkboxCell);
+
+        headers.forEach(header => {
+            const cell = document.createElement('td');
+            cell.textContent = obj[header];
+            row.appendChild(cell);
+        });
+        table.appendChild(row);
+    });
    
        // Adicionar a tabela ao DOM (por exemplo, a um elemento com id "tabela")
        document.getElementById('tabela').appendChild(table);
