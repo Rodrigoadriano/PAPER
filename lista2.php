@@ -14,6 +14,18 @@ $result = $conn->query($sql);
 // Se houver resultados
 if ($result->num_rows > 0) {
 
+    $rows = array(); // Array para armazenar os resultados
+    
+    while ($row = $result->fetch_assoc()) {
+        $rows[] = $row; // Adiciona cada linha ao array $rows
+    }
+
+    // Converte o array $rows para JSON usando json_encode()
+    $json = json_encode($rows);
+
+    // Retorna ou imprime o JSON
+    echo $json;
+
 
   
 } else {
