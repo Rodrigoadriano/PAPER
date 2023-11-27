@@ -34,3 +34,7 @@ Para executar este projeto localmente, siga os passos abaixo:
 1. Clone este repositório.
 2. Configure o servidor Apache (XAMPP) e o banco de dados SQL conforme necessário.
 3. Inicie a aplicação INDEX.HTML
+
+## Diagrama inicial
+
+![Imagem do Gráfico](https://github.com/Rodrigoadriano/PAPER/blob/main/Paper.png?raw=true)
