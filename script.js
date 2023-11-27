@@ -32,5 +32,56 @@ function send(){
             console.error('Erro:', error);
         });
     }
-    
+
+
 };
+
+function CarregaTabela(){
+   //Solicitar o JSON
+   fetch('lista2.php')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro na requisição');
+        }
+        return response.json(); // Retorna a Promise com o JSON
+    })
+    .then(data => {
+        //Criar a tabela com o JSON
+        criarTabelaDeJSON(data); // Manipula os dados JSON recebidos
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
+ 
+   
+
+ 
+   function criarTabelaDeJSON(json) {
+       // Criar uma tabela HTML
+       const table = document.createElement('table');
+       
+       // Criar cabeçalho da tabela
+       const headers = Object.keys(json[0]);
+       const headerRow = document.createElement('tr');
+       headers.forEach(headerText => {
+           const th = document.createElement('th');
+           th.textContent = headerText;
+           headerRow.appendChild(th);
+       });
+       table.appendChild(headerRow);
+   
+       // Preencher a tabela com os dados
+       json.forEach(obj => {
+           const row = document.createElement('tr');
+           headers.forEach(header => {
+               const cell = document.createElement('td');
+               cell.textContent = obj[header];
+               row.appendChild(cell);
+           });
+           table.appendChild(row);
+       });
+   
+       // Adicionar a tabela ao DOM (por exemplo, a um elemento com id "tabela")
+       document.getElementById('tabela').appendChild(table);
+   };
+};    
