@@ -17,14 +17,15 @@
 
 </head>
 <body>
-    <script>CarregaTabela()</script>
-
+    
     <section class="fundoo">
-
+        
         <main class="base main2">
             <h1>Lista de Cadastros</h1>
             <div id="tabela"></div>
-            <div class="boxBotões">
+            <script>CarregaTabela()</script>
+    
+                <div class="boxBotões">
                 <button class="button" onclick="home()">Voltar</button>
                 <button class="button">Excluir</button>
             </div>

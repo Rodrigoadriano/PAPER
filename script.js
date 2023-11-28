@@ -14,6 +14,45 @@ function redirecttoConsulta(){
     window.location.href = 'consulta.php';
 };
  
+
+function deleteUser(){
+    /// Pega o numero do ID do check
+   // let checkboxes = document.getElementsByClassName("check");
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    // Array para armazenar os valores dos checkboxes selecionados
+    let checkboxesSelecionados = [];
+
+    // Verifica cada checkbox
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+            checkboxesSelecionados.push(checkbox.value);
+        }
+    });
+
+
+    dados = JSON.stringify(checkboxesSelecionados);
+    console.log(checkboxesSelecionados);
+
+    // Envia numero para delete.php
+
+    fetch('delete.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: dados
+    })
+
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        //Exibe o alerta com base na resposta do servidor
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
+};
+
 function send(){
 
     document.getElementById('meuForm').addEventListener('submit', function(event) {
@@ -89,7 +128,9 @@ function CarregaTabela(){
         const checkboxCell = document.createElement('td');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        checkbox.value = obj.ID; // Substitua 'id' pelo nome do campo que contém o ID
+        checkbox.value = obj.CODIGO;
+        checkbox.classList.add("check") // Substitua 'id' pelo nome do campo que contém o ID
+        console.log(obj.CODIGO); //
         checkboxCell.appendChild(checkbox);
         row.appendChild(checkboxCell);
 
