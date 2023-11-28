@@ -7,8 +7,12 @@
     window.location.href = 'cadastro.php';
 }
  function redirectTolist() {
-    window.location.href = 'lista.php';
+    window.location.href = 'lista2.php';
 }
+
+function redirecttoConsulta(){
+    window.location.href = 'consulta.php';
+};
  
 function send(){
 
@@ -38,12 +42,14 @@ function send(){
 
 function CarregaTabela(){
    //Solicitar o JSON
+
    fetch('lista2.php')
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro na requisição');
         }
         return response.json(); // Retorna a Promise com o JSON
+        
     })
     .then(data => {
         //Criar a tabela com o JSON
@@ -57,6 +63,7 @@ function CarregaTabela(){
 
  
    function criarTabelaDeJSON(json) {
+  
        // Criar uma tabela HTML
        const table = document.createElement('table');
        
@@ -78,7 +85,7 @@ function CarregaTabela(){
         const checkboxCell = document.createElement('td');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        checkbox.value = obj.id; // Substitua 'id' pelo nome do campo que contém o ID
+        checkbox.value = obj.ID; // Substitua 'id' pelo nome do campo que contém o ID
         checkboxCell.appendChild(checkbox);
         row.appendChild(checkboxCell);
 

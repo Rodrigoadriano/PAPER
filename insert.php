@@ -23,6 +23,7 @@ $link = $conexao;
    // Realiza inserção do novo registro na tabela do banco de dados
    $sql = "INSERT INTO FUNCIONARIO (CODIGO, NOME, CARGO, DESCRICAOCARGO,
    SETOR, SALARIO) VALUES ('$codigo', '$nome', '$cargo', '$descCargo', '$setor', '$salario')";
+   
    if(mysqli_query($link, $sql)){
     echo "Gravação efetuada com sucesso!"; // aqui poderia ser incluído um código para redirect
    } else{
@@ -31,4 +32,4 @@ $link = $conexao;
    // Close connection
    mysqli_close($link);
    ?>
-   
+  
