@@ -31,29 +31,29 @@
                         </tr>
                         <tr>
                             <td>Nome:</td>
-                            <td><input type="text" name="nome"></td>
+                            <td><input type="text" name="nome" required ></td>
                         </tr>
                         <tr>
                             <td>Cargo:</td>
-                            <td><input type="text" name="cargo"></td>
+                            <td><input type="text" name="cargo" required></td>
                         </tr>
                     <tr>
                         <td>Descrição cargo:</td>
                         <td><textarea name="descCargo" cols="20"
-                        rows="5"></textarea></td>
+                        rows="5" required></textarea></td>
                     </tr>
                     <tr>
                         <td>Setor:</td>
-                        <td><input type="text" name="setor"></td>
+                        <td><input type="text" name="setor" required></td>
                     </tr>
                     <tr>
                         <td>Salario:</td>
-                        <td><input type="text" name="salario"></td>
+                        <td><input type="text" name="salario" required></td>
                     </tr>
                         </table>
                     <br><br>
-                    <input type="submit" name="Gravar" onclick="send()">
-                    <button type="button" id="voltarBtn" onclick="home()">Voltar para a Página Principal</button>
+                    <input type="submit" name="Gravar" class="button" onclick="send()">
+                    <button type="button" id="voltarBtn" class="button" onclick="home()">Voltar</button>
             </form>
             
             

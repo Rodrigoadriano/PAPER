@@ -131,6 +131,7 @@ body{
 .tabela {
     border-collapse: collapse;
     border: 2px solid #000; /* Cor e largura da borda */
+    background-color: #84FAF0;
   }
   
   /* Centraliza o texto nas células */
@@ -141,5 +142,11 @@ body{
   }
 
   .tabela tr{
-    border-bottom: 2px solid #08002c; /* Adiciona uma linha sólida na parte inferior de todas as linhas, exceto na última */
+    border-bottom: 1px solid #08002c; /* Adiciona uma linha sólida na parte inferior de todas as linhas, exceto na última */
+  }
+
+  .main2 {
+    background-color: #3DB9F2;
+    flex-direction: column;
+
   }
