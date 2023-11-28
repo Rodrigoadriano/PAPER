@@ -126,3 +126,20 @@ body{
     margin: 10px;
 
 }
+
+
+.tabela {
+    border-collapse: collapse;
+    border: 2px solid #000; /* Cor e largura da borda */
+  }
+  
+  /* Centraliza o texto nas células */
+  .tabela th,
+  .tabela td {
+    text-align: center;
+    padding: 8px; /* Espaçamento interno para melhorar a legibilidade */
+  }
+
+  .tabela tr{
+    border-bottom: 2px solid #08002c; /* Adiciona uma linha sólida na parte inferior de todas as linhas, exceto na última */
+  }

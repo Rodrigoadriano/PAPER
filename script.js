@@ -70,6 +70,10 @@ function CarregaTabela(){
        // Criar cabeçalho da tabela
        const headers = Object.keys(json[0]);
        const headerRow = document.createElement('tr');
+       const th = document.createElement('th');
+       th.textContent = " ";
+       headerRow.appendChild(th);
+
        headers.forEach(headerText => {
            const th = document.createElement('th');
            th.textContent = headerText;
@@ -95,9 +99,11 @@ function CarregaTabela(){
             row.appendChild(cell);
         });
         table.appendChild(row);
+        table.classList.add('tabela');
     });
    
        // Adicionar a tabela ao DOM (por exemplo, a um elemento com id "tabela")
        document.getElementById('tabela').appendChild(table);
+
    };
 };    
