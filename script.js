@@ -80,7 +80,7 @@ function send(){
         });
     }
 
-
+    window.location.reload();
 };
 
 function CarregaTabela(){
