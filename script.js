@@ -29,9 +29,10 @@ function deleteUser(){
         }
     });
 
+    
 
     dados = JSON.stringify(checkboxesSelecionados);
-    console.log(checkboxesSelecionados);
+    console.log(dados);
 
     // Envia numero para delete.php
 
