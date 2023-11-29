@@ -37,4 +37,4 @@ Para executar este projeto localmente, siga os passos abaixo:
 
 ## Diagrama inicial
 
-![Imagem do Gráfico](https://github.com/Rodrigoadriano/PAPER/blob/main/Paper.png?raw=true)
+![Imagem do Gráfico](https://github.com/Rodrigoadriano/PAPER/blob/main/src/Paper.png?raw=true)
