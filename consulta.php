@@ -27,7 +27,7 @@
     
                 <div class="boxBotões">
                 <button class="button" onclick="home()">Voltar</button>
-                <button class="button">Excluir</button>
+                <button class="button" onclick="deleteUser()">Excluir</button>
             </div>
         </main>    
         
