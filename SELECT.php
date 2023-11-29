@@ -11,26 +11,6 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM funcionario";
 $result = $conn->query($sql);
 
-// Se houver resultados
-////////////////////////////////////////////////////////
-// Obtém os nomes das colunas
-//$columns = array();
-//while ($finfo = $result->fetch_field()) {
-//    $columns[] = $finfo->name;
-//}
-
-// Obtém os dados das linhas
-//while ($row = $result->fetch_assoc()) {
-  //  $rowData = array();
-  //  foreach ($columns as $col) {
- //       $rowData[$col] = $row[$col];
-//    }
-//    $rows[] = $rowData; // Adiciona cada linha ao array $rows
-//}
-//
-// Converte o array $rows para JSON usando json_encode()
-//$json = json_encode($rows);
-///////////////////////////////////////////////////////////
 if ($result->num_rows > 0) {
 
     $rows = array(); // Array para armazenar os resultados
@@ -45,15 +25,12 @@ if ($result->num_rows > 0) {
     // Retorna ou imprime o JSON
     header('Content-Type: application/json');
     echo $json;
-    
 
-  
 } else {
-  
+ 
  echo "0 resultados";
-  
+ 
 }
-
 
 // Feche a conexão
 $conn->close();

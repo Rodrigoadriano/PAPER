@@ -1,27 +1,23 @@
  function home(){
      window.location.href = 'index.html'
-
  }
 
  function redirectToCadastro() {
     window.location.href = 'cadastro.php';
 }
  function redirectTolist() {
-    window.location.href = 'lista2.php';
+    window.location.href = 'SELECT.php';
 }
 
 function redirecttoConsulta(){
     window.location.href = 'consulta.php';
 };
  
-
 function deleteUser(){
     /// Pega o numero do ID do check
-   // let checkboxes = document.getElementsByClassName("check");
     let checkboxes = document.querySelectorAll('input[type="checkbox"]');
     // Array para armazenar os valores dos checkboxes selecionados
     let checkboxesSelecionados = [];
-
     // Verifica cada checkbox
     checkboxes.forEach(function(checkbox) {
         if (checkbox.checked) {
@@ -29,13 +25,10 @@ function deleteUser(){
         }
     });
 
-    
-
+    //Converte array em json stringfy
     dados = JSON.stringify(checkboxesSelecionados);
-    console.log(dados);
 
-    // Envia numero para delete.php
-
+    // Envia dados para delete.php
     fetch('delete.php', {
         method: 'POST',
         headers: {
@@ -86,7 +79,7 @@ function send(){
 function CarregaTabela(){
    //Solicitar o JSON
 
-   fetch('lista2.php')
+   fetch('SELECT.php')
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro na requisição');
