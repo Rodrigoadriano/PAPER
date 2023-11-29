@@ -48,10 +48,13 @@ function deleteUser(){
     .then(data => {
         alert(data);
         //Exibe o alerta com base na resposta do servidor
+        
     })
     .catch(error => {
         console.error('Erro:', error);
     });
+
+    window.location.reload();
 };
 
 function send(){
