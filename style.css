@@ -4,13 +4,11 @@ body{
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #90CAF9;
-    color: #012441;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.8em;
-    overflow-x: hidden;
-    overflow-y: hidden;
+
 }
+
+
+
 
 
 .fundo{
@@ -19,18 +17,17 @@ body{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    
 }
 
-    
 .main{
    /* background-color: bisque;*/
     margin-top: -150px;
     height: 70vh;
-    width: 70vw;  
+    width: 70vw;
     }
 
-    
 .title{
    /* background-color: aquamarine;*/
     display: flex;
@@ -38,9 +35,6 @@ body{
     justify-content: center;
     height: 100px;
     font-size: xx-large;
-    font-family: 'Poppins', sans-serif;
-    font-style: regular;
-    color: #012441;
 }   
 
 .conteiner{
@@ -52,13 +46,6 @@ body{
     align-items: center;
     border-radius: 10px;
     border: none;
-    box-shadow: 0px 0px 10px 0px #012441;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
 }
 
 .cards{
@@ -69,95 +56,33 @@ body{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    border-radius: 10px;
-    border: none;
-    background-color: #84FAF0;
-    box-shadow: 0px 0px 10px 0px #012441;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-}  
+}
 
 .texto {
     
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-style: regular;
-    font-size: 20px;
-    color: #012441;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(187, 187, 187);
-    box-shadow: 0px 0px 10px 0px #012441;
-    transition: all 0.5s;   
+    font-size: xx-large;
 }
+
 
 
 
 .button {
     display: inline-block;
-    border-radius: 3px;
+    border-radius: 4px;
+    background-color: #90CAF9;
     border: none;
-    text-align: center;
-    font-size: 25px;
-    padding: 20px;
-    width: 150px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    font-family: 'Poppins', sans-serif;
-    font-style: regular;
-    font-size: 20px;
     color: #012441;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(187, 187, 187);
-    box-shadow: 0px 0px 10px 0px #012441;
-    transition: all 0.5s;
-  }
-
-
-.button:hover {
-    background-color: yellow;
-    color: green;
-    box-shadow: 0px 0px 10px 0px #012441;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-
-}
-
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
+  }
   
 
 
@@ -165,9 +90,9 @@ body{
 
 .fundoo{
     display: flex;
+
     justify-content: center;
     align-content: center;
-    
 
 }
 
@@ -181,13 +106,6 @@ body{
     margin-top: 50px;
     border-radius: 10px;
     border: none;
-    box-shadow: 0px 0px 10px 0px #012441;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
 }
 
 
@@ -197,44 +115,14 @@ body{
     background-color:#3DB9F2 ;
     height: 100%;
     justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0px 0px 10px 0px #012441;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
 }
 
 .esq form {  
+
     color: #ffffff;
+
     margin: 10px;
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-    font-style: regular;
-    font-size: 20px;
-    color: #012441;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
+
 }
 
 
@@ -242,87 +130,21 @@ body{
     border-collapse: collapse;
     border: 2px solid #000; /* Cor e largura da borda */
     background-color: #84FAF0;
-    width: 100%;
-    height: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0px 0px 10px 0px #012441;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
   }
   
   /* Centraliza o texto nas células */
   .tabela th,
   .tabela td {
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-style: regular;
-    font-size: 15px;
-    color: #012441;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px; /* Espaçamento interno para melhorar a legibilidade */
-
-
-
+    padding: 8px; /* Espaçamento interno para melhorar a legibilidade */
   }
 
   .tabela tr{
-    background-color: #3df25b;
-    border: 1px solid #08002c; /* Adiciona uma borda de 1px preta sólida */
-    color: #012441;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px; /* Espaçamento interno para melhorar a legibilidade */
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0px 0px 10px 0px #012441;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    border-bottom: 1px solid #08002c; /* Adiciona uma borda de 1px preta sólida */
+    border-bottom: 1px solid #08002c; /* Adiciona uma linha sólida na parte inferior de todas as linhas, exceto na última */
   }
 
   .main2 {
     background-color: #3DB9F2;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    transition: all 0.5s;
+
   }
-
-    .main2 form {  
-    
-        color: #ffffff;
-    
-        margin: 10px;
-        padding: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-family: 'Poppins', sans-serif;
-        font-style: regular;
-        font-size: 20px;
-        color: #012441;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-    }
-
