@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Cadastrar</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="script.js"></script>
 
@@ -64,3 +64,4 @@
     </main>
 </body>
 </html>
+    
