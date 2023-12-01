@@ -1,5 +1,10 @@
 <?php 
-$servidor = "localhost:3306";
+
+/*
+$servidor = "localhost:3306"; // kauan
+
+*/
+$servidor = "localhost:3360"; // Rodrigo
 $usuario = "root";
 $senha = "";
 $banco = "uniasselvi";
