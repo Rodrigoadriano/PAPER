@@ -52,7 +52,7 @@
                     </tr>
                         </table>
                     <br><br>
-                    <input type="submit" name="Gravar" class="button" onclick="send()">
+                    <input type="submit" name="Gravar" class="button" onclick="InsertDADOS()">
                     <button type="button" id="voltarBtn" class="button" onclick="home()">Voltar</button>
             </form>
             

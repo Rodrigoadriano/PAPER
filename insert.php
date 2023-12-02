@@ -9,6 +9,7 @@ $link = $conexao;
    $setor = mysqli_real_escape_string($link, $_REQUEST['setor']);
    $salario = mysqli_real_escape_string($link, $_REQUEST['salario']);
    $codigo = 1;
+   
    // pegando o próximo código (sem utilização de sequence do banco)
    $sql = "SELECT MAX(CODIGO) AS CODIGO FROM FUNCIONARIO";
    if($result = mysqli_query($link, $sql)){

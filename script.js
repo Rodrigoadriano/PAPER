@@ -51,13 +51,12 @@ function deleteUser(){
    
 };
 
-function send(){
+function InsertDADOS(){
 
     document.getElementById('meuForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Evita o envio padrão do formulário
         enviarFormulario();
-    });
-    
+    });   
     async function enviarFormulario() {
         console.log("Enviar formulario")
         const formulario = document.getElementById('meuForm');
@@ -74,21 +73,17 @@ function send(){
         .catch(error => {
             console.error('Erro:', error);
         });
-    }
-
-
-    
+    }    
 };
 
 function CarregaTabela(){
    //Solicitar o JSON
-
    fetch('SELECT.php')
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro na requisição');
         }
-        return response.json(); // Retorna a Promise com o JSON
+    return response.json(); // Retorna a Promise com o JSON
         
     })
     .then(data => {
@@ -98,43 +93,38 @@ function CarregaTabela(){
     .catch(error => {
         console.error('Erro:', error);
     });
- 
-   
-
- 
-   function criarTabelaDeJSON(json) {
-  
-       // Criar uma tabela HTML
-       const table = document.createElement('table');
-       
-       // Criar cabeçalho da tabela
-       const headers = Object.keys(json[0]);
-       const headerRow = document.createElement('tr');
-       const th = document.createElement('th');
-       th.textContent = " ";
-       headerRow.appendChild(th);
-
-       headers.forEach(headerText => {
-           const th = document.createElement('th');
-           th.textContent = headerText;
-           headerRow.appendChild(th);
-       });
-       table.appendChild(headerRow);
-   
-       // Preencher a tabela com os dados
-    json.forEach(obj => {
-        const row = document.createElement('tr');
-
+    function criarTabelaDeJSON(json) {
+        // Criar uma tabela HTML
+        const table = document.createElement('table');
+        
+        // Criar cabeçalho da tabela
+        const headers = Object.keys(json[0]);
+        const headerRow = document.createElement('tr');
+        const th = document.createElement('th');
+        th.textContent = " ";
+        headerRow.appendChild(th);
+        headers.forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
+        
+        // Preencher a tabela com os dados
+        json.forEach(obj => {
+            const row = document.createElement('tr');
+            
         // Adiciona o checkbox na primeira célula de cada linha
         const checkboxCell = document.createElement('td');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.value = obj.CODIGO;
-        checkbox.classList.add("check") // Substitua 'id' pelo nome do campo que contém o ID
+        checkbox.classList.add("check") 
         console.log(obj.CODIGO); //
         checkboxCell.appendChild(checkbox);
         row.appendChild(checkboxCell);
-
+        
+        // Adiciona os cabeçalhos
         headers.forEach(header => {
             const cell = document.createElement('td');
             cell.textContent = obj[header];
@@ -143,10 +133,8 @@ function CarregaTabela(){
         table.appendChild(row);
         table.classList.add('tabela');
     });
-   
-       // Adicionar a tabela ao DOM (por exemplo, a um elemento com id "tabela")
-       document.getElementById('tabela').appendChild(table);
-
-   };
+    // Adicionar a tabela ao DOM 
+    document.getElementById('tabela').appendChild(table);
+};
 };    
 
