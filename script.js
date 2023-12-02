@@ -41,13 +41,14 @@ function deleteUser(){
     .then(data => {
         alert(data);
         //Exibe o alerta com base na resposta do servidor
+        window.location.reload();
         
     })
     .catch(error => {
         console.error('Erro:', error);
     });
 
-    window.location.reload();
+   
 };
 
 function send(){
@@ -57,7 +58,8 @@ function send(){
         enviarFormulario();
     });
     
-    function enviarFormulario() {
+    async function enviarFormulario() {
+        console.log("Enviar formulario")
         const formulario = document.getElementById('meuForm');
         fetch('insert.php', {
             method: 'POST',
@@ -65,15 +67,17 @@ function send(){
         })
         .then(response => response.text())
         .then(data => {
-            alert(data);
+             alert(data);
             //Exibe o alerta com base na resposta do servidor
+            window.location.reload();
         })
         .catch(error => {
             console.error('Erro:', error);
         });
     }
 
-    window.location.reload();
+
+    
 };
 
 function CarregaTabela(){
