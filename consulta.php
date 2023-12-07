@@ -21,7 +21,7 @@
     <section class="fundoo">
         
         <main class="base main2">
-            <h1>Lista de Cadastros</h1>
+            <h1>Listas de Cadastros</h1>
             <div id="tabela"></div>
             <script>CarregaTabela()</script>
     
